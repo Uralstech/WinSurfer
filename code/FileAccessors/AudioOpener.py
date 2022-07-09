@@ -100,6 +100,7 @@ def open_file(root, current_path:str):
         if file_type == ".mp3":
             if time != 0:
                 mixer.music.set_pos(timeline_scale.get() + time)
+                timeline_scale.set(timeline_scale.get() + time)
             else:
                 mixer.music.set_pos(timeline_scale.get())
 
