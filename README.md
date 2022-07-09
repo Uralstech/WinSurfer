@@ -14,4 +14,4 @@ Requirements:
     python-docx 0.8.11
 
 Instructions:
-  Just open the WinSurfer.py file.
+  Just open WinSurfer.py.
