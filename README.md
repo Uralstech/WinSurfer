@@ -3,6 +3,7 @@ A DOS-aesthetic file explorer/opener/viewer made in Python.
 
 Requirements:
   You need Python to run this (duh)
+  
   Libraries:
     ffpyplayer  4.3.5
     lxml        4.9.1
