@@ -15,9 +15,3 @@ Requirements:
 
 Instructions:
   Just open WinSurfer.py.
-
-BUG:
-  DON'T CHANGE THE FONT IN THE TEXT EDITOR!
-  If you do, the next time you open WinSurfer, it will display an error.
-  To fix the error, delete the Data folder in the main directory, or just delete User_data.wsef in the Data folder.
-  I AM WORKING ON THIS BUG!
