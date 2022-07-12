@@ -236,8 +236,11 @@ def open_file(root, current_path:str, data_path:str):
     else:
         GetMenu(root2, subcommands={"File" : {"Save" : save_file, "Save as" : lambda:save_file(saveas=True)}, "View" : {"Main" : change_font}})
 
-    text = Text(root2, tabs=main_tab, wrap=NONE, bg="Black", fg=main_font_colour, font=main_font, insertbackground="White")
+    scrollbar = Scrollbar(root2)
+    scrollbar.pack(side=RIGHT, fill=Y)
+    text = Text(root2, tabs=main_tab, wrap=NONE, bg="Black", fg=main_font_colour, font=main_font, insertbackground="White", yscrollcommand=scrollbar.set)
     text.pack(fill="both", expand=1, side=TOP)
+    scrollbar.config(command=text.yview)
     if file_type == ".wsef":
         file = read(current_path, format_string=True)
         fstr = ""
