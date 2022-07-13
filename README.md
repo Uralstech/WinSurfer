@@ -12,6 +12,7 @@ Requirements:
     pygame      2.1.2
     pymediainfo 5.1.0
     python-docx 0.8.11
+    ShrtCde 0.2.1
 
 Instructions:
   Just open WinSurfer.py.
