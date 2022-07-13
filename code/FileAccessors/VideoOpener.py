@@ -7,7 +7,7 @@ Helps WinSurfer with video files!
 """
 
 from time import strftime, gmtime
-from ShortCode.InDev.UI import *
+from ShrtCde.InDev.UI import *
 from pyvidplayer import Video
 from pygame import display
 import os
@@ -25,10 +25,6 @@ def open_file(root, current_path:str):
 
     global called
     called = False
-
-    volumes = [0]
-    for i in range(1, 101):
-        volumes.append(volumes[i-1]+1/100)
 
     def get_time(end=False):
         duration = videoplayer.get_file_data()["duration"]
@@ -75,7 +71,7 @@ def open_file(root, current_path:str):
         if time == None: videoplayer.seek(int(timeline_scale.get() - videoplayer.get_playback_data()["time"]))
         else: videoplayer.seek(time)
 
-    def set_volume(v=None): videoplayer.set_volume(volumes[volume.get()])
+    def set_volume(v=None): videoplayer.set_volume(volume.get() / 100.0)
 
     display.init()
     videoplayer = Video(current_path);

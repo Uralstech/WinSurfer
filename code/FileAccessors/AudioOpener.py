@@ -7,7 +7,7 @@ Helps WinSurfer with audio files!
 """
 
 from time import strftime, gmtime
-from ShortCode.InDev.UI import *
+from ShrtCde.InDev.UI import *
 from mutagen.wave import WAVE
 from mutagen.mp3 import MP3
 from pygame import mixer
@@ -23,10 +23,6 @@ def open_file(root, current_path:str):
     
     global paused
     paused = False
-
-    volumes = [0]
-    for i in range(1, 101):
-        volumes.append(volumes[i-1]+1/100)
 
     music = None
     music_length = 0
@@ -67,6 +63,7 @@ def open_file(root, current_path:str):
         paused = is_paused
 
         if not paused and not mixer.music.get_busy():
+            mixer.music.load(current_path)
             mixer.music.play(loops=0)
             b['text'] = "Pause"
             return
@@ -94,7 +91,7 @@ def open_file(root, current_path:str):
         root2.destroy()
     
     def set_volume(v=None):
-        mixer.music.set_volume(volumes[volume.get()])
+        mixer.music.set_volume(volume.get() / 100.0)
 
     def set_time(v=None, time=0):
         if file_type == ".mp3":

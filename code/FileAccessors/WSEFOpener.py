@@ -6,7 +6,7 @@ Helps WinSurfer with WSEF (WinSurfer Encrypted File) files!
 
 """
 
-from ShortCode.FileSystem import *
+from ShrtCde.FileSystem import *
 from Encryptor import Encryptor
 import os
 

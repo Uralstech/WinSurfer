@@ -6,7 +6,7 @@ This helps WinSurfer with loggin in!
 
 """
 
-from ShortCode.InDev.UI import *
+from ShrtCde.InDev.UI import *
 from FileAccessors.WSEFOpener import *
 from Encryptor import Encryptor
 from USER import USER

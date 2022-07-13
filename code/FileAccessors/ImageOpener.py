@@ -6,7 +6,7 @@ Helps WinSurfer with image files!
 
 """
 
-from ShortCode.InDev.UI import *
+from ShrtCde.InDev.UI import *
 from PIL import ImageTk, Image
 import os
 

@@ -6,7 +6,7 @@ This encrypts and decrypts files for WinSurfer!
 
 """
 
-from ShortCode.FileSystem import *
+from ShrtCde.FileSystem import *
 from random import *
 import os
 

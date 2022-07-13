@@ -8,8 +8,8 @@ Helps WinSurfer with text and Python files!
 
 from FileAccessors.WSEFOpener import read, write
 from subprocess import Popen, PIPE
-from ShortCode.FileSystem import *
-from ShortCode.InDev.UI import *
+from ShrtCde.FileSystem import *
+from ShrtCde.InDev.UI import *
 from tkinter import filedialog
 from docx import Document
 from USER import USER
